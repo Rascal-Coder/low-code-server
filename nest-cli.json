@@ -1,40 +1,39 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/low-code/src",
+  "sourceRoot": "apps/ignitorSever/src",
   "compilerOptions": {
-    "deleteOutDir": true,
-    "webpack": true,
-    "tsConfigPath": "apps/low-code/tsconfig.app.json"
+    "webpack": false,
+    "tsConfigPath": "apps/ignitorSever/tsconfig.app.json"
   },
   "monorepo": true,
-  "root": "apps/low-code",
+  "root": "apps/ignitorSever",
   "projects": {
-    "low-code": {
+    "ignitor-sever": {
       "type": "application",
-      "root": "apps/low-code",
+      "root": "apps/ignitorSever",
       "entryFile": "main",
-      "sourceRoot": "apps/low-code/src",
+      "sourceRoot": "apps/ignitorSever/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/low-code/tsconfig.app.json"
+        "tsConfigPath": "apps/ignitorSever/tsconfig.app.json"
       }
     },
-    "devops": {
+    "devops-server": {
       "type": "application",
-      "root": "apps/devops",
+      "root": "apps/devopsServer",
       "entryFile": "main",
-      "sourceRoot": "apps/devops/src",
+      "sourceRoot": "apps/devopsServer/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/devops/tsconfig.app.json"
+        "tsConfigPath": "apps/devopsServer/tsconfig.app.json"
       }
     },
-    "comm": {
+    "common": {
       "type": "library",
-      "root": "libs/comm",
+      "root": "libs/common",
       "entryFile": "index",
-      "sourceRoot": "libs/comm/src",
+      "sourceRoot": "libs/common/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/comm/tsconfig.lib.json"
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
       }
     }
   }

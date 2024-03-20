@@ -1,4 +1,0 @@
-{
-    "editor.defaultFormatter": "files.eol",
-    "files.eol": "\n" // 或者 "\r\n"（Windows 的换行符） 或 "auto"（自动检测）
-}
