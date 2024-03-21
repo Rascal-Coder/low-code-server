@@ -10,7 +10,7 @@ export class AppController {
   ) {}
 
   @Get()
-  @Version([VERSION_NEUTRAL, '1'])
+  @Version('1')
   getHello(): string {
     return this.appService.getHello();
   }
